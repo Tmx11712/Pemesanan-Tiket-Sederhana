@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistem Pemesanan Tiket</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Pemesanan Tiket</h1>
+
+      <div class="form-group">
+        <label for="nama">Nama Lengkap</label>
+        <input type="text" id="nama" placeholder="Masukkan nama lengkap" />
+      </div>
+
+      <div class="ticket-options">
+        <div
+          class="ticket-card"
+          data-type="regular"
+          onclick="selectTicket('regular')"
+        >
+          <div class="ticket-type">Regular Ticket</div>
+          <div class="ticket-price">Rp 50.000</div>
+        </div>
+        <div class="ticket-card" data-type="vip" onclick="selectTicket('vip')">
+          <div class="ticket-type">VIP Ticket</div>
+          <div class="ticket-price">Rp 100.000</div>
+        </div>
+      </div>
+
+      <div class="summary">
+        <h2>Ringkasan Pesanan</h2>
+        <div class="summary-item">
+          <span>Jenis Tiket:</span>
+          <span id="selectedTicketType">-</span>
+        </div>
+      </div>
+
+      <button onclick="pesanTiket()" id="pesanButton" disabled>
+        Pesan Tiket
+      </button>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
